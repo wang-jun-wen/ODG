@@ -1,7 +1,7 @@
 clc;
-initLen=300;          
-trainLen=5600;         
-testLen=1350;
+initLen=400;          
+trainLen=12400;         
+testLen=3000;
 inSize=3;              
 outSize=3;             
 load('C:\Users\GWO_pos.mat', 'Best_pos');
@@ -18,7 +18,7 @@ W=sprand(resSize, resSize, density);
 Win = (rand(resSize,inSize) * 2 - 1) * IS;  
 
 %% Import test data
-load('C:\Users\Lorenz_train&test_data', 'Mtraining', 'Mtest');
+load('C:\Users\Rosser_train&test_data', 'Mtraining', 'Mtest');
 indata = [Mtraining; Mtest];   
 outdata = [Mtraining; Mtest];  
 sigma  = std(indata);          
